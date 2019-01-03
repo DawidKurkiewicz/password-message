@@ -3,7 +3,7 @@ h1.innerHTML = "Password"
 document.body.appendChild(h1)
 const inputField = document.createElement("input");
 inputField.type = "password"
-inputField.setAttribute('id','pass')
+inputField.setAttribute('id', 'pass')
 document.body.appendChild(inputField)
 const divMessage = document.createElement("div")
 divMessage.classList.add("message")
@@ -55,7 +55,7 @@ const showMessage = (e) => {
         if (input == lowerCasePass[i]) {
             div.innerHTML = messages[i]
             e.target.value = ''
-
+            alert("now you are logged in as " + passwords[i])
         }
 }
 
