@@ -20,9 +20,14 @@ input.addEventListener("focus", (e) => {
 
 //ForEach
 
+passwords.forEach((pass, i) => {
+    passwords[i]=pass.toLowerCase()
+})
+
 const showMessage = (e) => {
+    const input = e.target.value.toLowerCase()
     passwords.forEach((pass, i) => {
-        if (pass.toLowerCase() === e.target.value.toLowerCase()) {
+        if (pass === input) {
             document.querySelector(".message").innerHTML = messages[i];
             e.target.value = ''
 
