@@ -2,13 +2,15 @@ const h1 = document.createElement("h1")
 h1.innerHTML = "Password"
 document.body.appendChild(h1)
 const inputField = document.createElement("input");
-inputField.type = "password";
+inputField.type = "password"
 inputField.setAttribute('id','pass')
 document.body.appendChild(inputField)
 const divMessage = document.createElement("div")
 divMessage.classList.add("message")
 document.body.appendChild(divMessage)
-
+const h2 = document.createElement("h2")
+h2.innerHTML = "Passwords:</br>user1</br>user2"
+document.body.appendChild(h2)
 const input = document.getElementById("pass");
 const div = document.querySelector(".message");
 const passwords = ["User1", "user2"]
@@ -17,6 +19,7 @@ input.addEventListener("focus", (e) => {
     e.target.classList.toggle("active")
 })
 
+//              Without LowerCase
 // input.addEventListener("keyup", (e) => {
 //     div.innerHTML = ''
 //     const text = e.target.value
