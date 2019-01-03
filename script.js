@@ -1,13 +1,14 @@
 const input = document.getElementById("pass");
 const div = document.querySelector(".message");
-const passwords = ["user", "user2"]
+const passwords = ["user1", "user2"]
 const messages = ["correct password user1", "correct password user2"]
 input.addEventListener("keyup", (e) => {
+    div.innerHTML = ''
     const text = e.target.value
     passwords.forEach((pass, i) => {
         if (pass === text) {
             div.innerHTML = messages[i]
-
+            e.target.value = ''
         }
     })
 })
