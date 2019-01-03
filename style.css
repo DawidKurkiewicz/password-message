@@ -3,7 +3,7 @@ body {
     text-align: center;
     font-family: arial;
    }
-   label,
+   h1,
    input {
     height: 40px;
     line-height: 40px;
